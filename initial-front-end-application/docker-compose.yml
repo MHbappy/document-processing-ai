@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  nextapp:
+    container_name: hello-next
+    build: .
+    ports:
+      - "3000:8071"
+    environment:
+      - NODE_ENV=production
+    # restart: always
