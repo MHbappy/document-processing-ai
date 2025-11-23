@@ -13,6 +13,6 @@ public class DashboardController {
         log.error("There is an error in TestApi");
         log.info("There is an info in TestApi");
         log.debug("There is a debug info in TestApi");
-        return "Hello World1!";
+        return "Hello World12!";
     }
 }
