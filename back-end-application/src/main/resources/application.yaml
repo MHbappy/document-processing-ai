@@ -1,7 +1,13 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://172.168.20.240:5432/test_processing
+    username: suffixit01
+    password: SilTest@321!
+  jpa:
+    hibernate:
+      ddl-auto: update
   application:
     name: application
-
 
 management:
   endpoints:
