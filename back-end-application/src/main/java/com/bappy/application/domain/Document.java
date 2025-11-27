@@ -15,26 +15,16 @@ import java.util.UUID;
 public class Document {
 
     @Id
-    @Column(columnDefinition = "uuid")
+    @GeneratedValue
     private UUID id;
 
-    @Column(name = "original_filename")
+    private UUID tenantId;
+    private UUID uploaderId;
     private String originalFilename;
-
-    @Column(name = "storage_path")
-    private String storagePath;
-
-    @Column(name = "content_type")
+    private String storagePath; // e.g. s3://bucket/key (MinIO)
     private String contentType;
-
-    @Column(name = "status")
     private String status; // UPLOADED, PROCESSING, READY, ERROR
-
     private Integer pages;
-
-    @Column(name = "uploaded_at")
     private LocalDateTime uploadedAt;
-
-    @Column(name = "processed_at")
     private LocalDateTime processedAt;
 }
